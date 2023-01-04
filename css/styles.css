@@ -126,6 +126,7 @@ body {
 }
 .service-button {
     font-family: 'Roboto', sans-serif;
+    cursor: pointer;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
@@ -138,6 +139,37 @@ body {
     width: 200px;
     height: 50px;
 }
+.modal {
+    cursor: not-allowed;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    display: flex;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.box-modal {
+    position: relative;
+    background: var(--white);
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+        0px 2px 1px rgb(0 0 0 / 20%);
+    border-radius: 4px;
+    width: 528px;
+    height: 581px;
+    margin: auto;
+    cursor: initial;
+    transform: translateY(0%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms 250ms ease-in-out,
+        visibility 250ms 250ms ease-in-out;
+}
 .title-box {
     display: flex;
     flex-direction: column;
@@ -148,7 +180,7 @@ body {
     background-color: var(--dark-background);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: 1600px 600px;
+    background-size: 1600px 624px;
     background-image: linear-gradient(
             to right,
             var(--bg-gradient),
