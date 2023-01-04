@@ -12,6 +12,7 @@
     --bg-gradient: #2f303a66;
     --social-color: #afb1b8;
     --social-lower-bg: #ffffff1a;
+    --bg-modal: #fff;
 }
 
 ul,
@@ -140,7 +141,6 @@ body {
     height: 50px;
 }
 .modal {
-    cursor: not-allowed;
     background-color: rgba(0, 0, 0, 0.2);
     position: fixed;
     display: flex;
@@ -151,15 +151,15 @@ body {
 }
 .box-modal {
     position: relative;
-    background: var(--white);
-    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
-        0px 2px 1px rgb(0 0 0 / 20%);
-    border-radius: 4px;
-    width: 528px;
-    height: 581px;
     margin: auto;
     cursor: initial;
-    transform: translateY(0%);
+    width: 528px;
+    height: 581px;
+    border-radius: 4px;
+    background: var(--bg-modal);
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+        0px 2px 1px rgb(0 0 0 / 20%);
+    transform: scale(100%);
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
         opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
